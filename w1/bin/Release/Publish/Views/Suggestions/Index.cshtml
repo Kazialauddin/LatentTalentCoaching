@@ -1,0 +1,47 @@
+﻿@model IEnumerable<w1.Models.Suggestion>
+
+@{
+    ViewBag.Title = "Suggestion";
+}
+
+<h2>Suggestion</h2>
+<hr />
+
+<table class="table table-striped">
+    <tr>
+        <th class="btn-info">
+            <b>Subject Name:</b>
+        </th>
+        <th>
+           Part A
+        </th>
+        <th>
+            Part B
+        </th>
+        <th class="alert-info">
+            <button class="btn btn-lg">
+                @Html.ActionLink("Create New", "Create")
+            </button>
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="btn-info">
+            @Html.DisplayFor(modelItem => item.SubjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discript1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discript2)
+        </td>
+        <td class="alert-info">
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

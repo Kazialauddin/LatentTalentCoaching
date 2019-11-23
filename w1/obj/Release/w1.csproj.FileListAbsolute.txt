@@ -1,0 +1,243 @@
+F:\AKAM\Latent11\w1\bin\w1.dll.config
+F:\AKAM\Latent11\w1\bin\w1.dll
+F:\AKAM\Latent11\w1\bin\w1.pdb
+F:\AKAM\Latent11\w1\bin\roslyn\csc.exe
+F:\AKAM\Latent11\w1\bin\roslyn\csc.exe.config
+F:\AKAM\Latent11\w1\bin\roslyn\csc.rsp
+F:\AKAM\Latent11\w1\bin\roslyn\csi.exe
+F:\AKAM\Latent11\w1\bin\roslyn\csi.exe.config
+F:\AKAM\Latent11\w1\bin\roslyn\csi.rsp
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.Managed.Core.targets
+F:\AKAM\Latent11\w1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\AKAM\Latent11\w1\bin\roslyn\System.AppContext.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Collections.Immutable.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Console.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.IO.Compression.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.IO.FileSystem.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.IO.Pipes.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Reflection.Metadata.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Security.AccessControl.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Security.Claims.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Security.Principal.Windows.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.ValueTuple.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Xml.XmlDocument.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Xml.XPath.dll
+F:\AKAM\Latent11\w1\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\AKAM\Latent11\w1\bin\roslyn\vbc.exe
+F:\AKAM\Latent11\w1\bin\roslyn\vbc.exe.config
+F:\AKAM\Latent11\w1\bin\roslyn\vbc.rsp
+F:\AKAM\Latent11\w1\bin\roslyn\VBCSCompiler.exe
+F:\AKAM\Latent11\w1\bin\roslyn\VBCSCompiler.exe.config
+F:\AKAM\Latent11\w1\bin\Antlr3.Runtime.dll
+F:\AKAM\Latent11\w1\bin\EntityFramework.dll
+F:\AKAM\Latent11\w1\bin\EntityFramework.SqlServer.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.Identity.Core.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.Client.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.Core.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.Cookies.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.Facebook.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.Google.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.OAuth.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.Twitter.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.Web.Infrastructure.dll
+F:\AKAM\Latent11\w1\bin\Newtonsoft.Json.dll
+F:\AKAM\Latent11\w1\bin\Owin.dll
+F:\AKAM\Latent11\w1\bin\System.Net.Http.Formatting.dll
+F:\AKAM\Latent11\w1\bin\System.Web.Helpers.dll
+F:\AKAM\Latent11\w1\bin\System.Web.Http.dll
+F:\AKAM\Latent11\w1\bin\System.Web.Http.WebHost.dll
+F:\AKAM\Latent11\w1\bin\System.Web.Mvc.dll
+F:\AKAM\Latent11\w1\bin\System.Web.Optimization.dll
+F:\AKAM\Latent11\w1\bin\System.Web.Razor.dll
+F:\AKAM\Latent11\w1\bin\System.Web.WebPages.Deployment.dll
+F:\AKAM\Latent11\w1\bin\System.Web.WebPages.dll
+F:\AKAM\Latent11\w1\bin\System.Web.WebPages.Razor.dll
+F:\AKAM\Latent11\w1\bin\WebGrease.dll
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.Client.pdb
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.Client.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.Core.pdb
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.Core.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+F:\AKAM\Latent11\w1\bin\System.Web.Helpers.xml
+F:\AKAM\Latent11\w1\bin\System.Web.Mvc.xml
+F:\AKAM\Latent11\w1\bin\System.Web.Optimization.xml
+F:\AKAM\Latent11\w1\bin\System.Web.Razor.xml
+F:\AKAM\Latent11\w1\bin\System.Web.WebPages.xml
+F:\AKAM\Latent11\w1\bin\System.Web.WebPages.Deployment.xml
+F:\AKAM\Latent11\w1\bin\System.Web.WebPages.Razor.xml
+F:\AKAM\Latent11\w1\bin\Newtonsoft.Json.xml
+F:\AKAM\Latent11\w1\bin\Antlr3.Runtime.pdb
+F:\AKAM\Latent11\w1\bin\System.Net.Http.Formatting.xml
+F:\AKAM\Latent11\w1\bin\System.Web.Http.xml
+F:\AKAM\Latent11\w1\bin\System.Web.Http.WebHost.xml
+F:\AKAM\Latent11\w1\bin\EntityFramework.xml
+F:\AKAM\Latent11\w1\bin\EntityFramework.SqlServer.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.Identity.Core.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.Facebook.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.Cookies.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.Google.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.Twitter.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.Owin.Security.OAuth.xml
+F:\AKAM\Latent11\w1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\AKAM\Latent11\w1\obj\Release\w1.csproj.CoreCompileInputs.cache
+F:\AKAM\Latent11\w1\obj\Release\w1.csproj.CopyComplete
+F:\AKAM\Latent11\w1\obj\Release\w1.dll
+F:\AKAM\Latent11\w1\obj\Release\w1.pdb
+F:\AKAM\Latent11\w1\obj\Release\w1.csprojAssemblyReference.cache
+F:\AK Work\Latent11\w1\bin\w1.dll.config
+F:\AK Work\Latent11\w1\bin\w1.dll
+F:\AK Work\Latent11\w1\bin\w1.pdb
+F:\AK Work\Latent11\w1\bin\roslyn\csc.exe
+F:\AK Work\Latent11\w1\bin\roslyn\csc.exe.config
+F:\AK Work\Latent11\w1\bin\roslyn\csc.rsp
+F:\AK Work\Latent11\w1\bin\roslyn\csi.exe
+F:\AK Work\Latent11\w1\bin\roslyn\csi.exe.config
+F:\AK Work\Latent11\w1\bin\roslyn\csi.rsp
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.Managed.Core.targets
+F:\AK Work\Latent11\w1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\AK Work\Latent11\w1\bin\roslyn\System.AppContext.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Collections.Immutable.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Console.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.IO.Compression.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.IO.FileSystem.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.IO.Pipes.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Reflection.Metadata.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Security.AccessControl.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Security.Claims.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Security.Principal.Windows.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.ValueTuple.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Xml.XmlDocument.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Xml.XPath.dll
+F:\AK Work\Latent11\w1\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\AK Work\Latent11\w1\bin\roslyn\vbc.exe
+F:\AK Work\Latent11\w1\bin\roslyn\vbc.exe.config
+F:\AK Work\Latent11\w1\bin\roslyn\vbc.rsp
+F:\AK Work\Latent11\w1\bin\roslyn\VBCSCompiler.exe
+F:\AK Work\Latent11\w1\bin\roslyn\VBCSCompiler.exe.config
+F:\AK Work\Latent11\w1\bin\Antlr3.Runtime.dll
+F:\AK Work\Latent11\w1\bin\EntityFramework.dll
+F:\AK Work\Latent11\w1\bin\EntityFramework.SqlServer.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.Identity.Core.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.Client.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.Core.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.Cookies.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.Facebook.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.Google.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.OAuth.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.Twitter.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.Web.Infrastructure.dll
+F:\AK Work\Latent11\w1\bin\Newtonsoft.Json.dll
+F:\AK Work\Latent11\w1\bin\Owin.dll
+F:\AK Work\Latent11\w1\bin\System.Net.Http.Formatting.dll
+F:\AK Work\Latent11\w1\bin\System.Web.Helpers.dll
+F:\AK Work\Latent11\w1\bin\System.Web.Http.dll
+F:\AK Work\Latent11\w1\bin\System.Web.Http.WebHost.dll
+F:\AK Work\Latent11\w1\bin\System.Web.Mvc.dll
+F:\AK Work\Latent11\w1\bin\System.Web.Optimization.dll
+F:\AK Work\Latent11\w1\bin\System.Web.Razor.dll
+F:\AK Work\Latent11\w1\bin\System.Web.WebPages.Deployment.dll
+F:\AK Work\Latent11\w1\bin\System.Web.WebPages.dll
+F:\AK Work\Latent11\w1\bin\System.Web.WebPages.Razor.dll
+F:\AK Work\Latent11\w1\bin\WebGrease.dll
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.Client.pdb
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.Client.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.Core.pdb
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.Core.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+F:\AK Work\Latent11\w1\bin\System.Web.Helpers.xml
+F:\AK Work\Latent11\w1\bin\System.Web.Mvc.xml
+F:\AK Work\Latent11\w1\bin\System.Web.Optimization.xml
+F:\AK Work\Latent11\w1\bin\System.Web.Razor.xml
+F:\AK Work\Latent11\w1\bin\System.Web.WebPages.xml
+F:\AK Work\Latent11\w1\bin\System.Web.WebPages.Deployment.xml
+F:\AK Work\Latent11\w1\bin\System.Web.WebPages.Razor.xml
+F:\AK Work\Latent11\w1\bin\Newtonsoft.Json.xml
+F:\AK Work\Latent11\w1\bin\Antlr3.Runtime.pdb
+F:\AK Work\Latent11\w1\bin\System.Net.Http.Formatting.xml
+F:\AK Work\Latent11\w1\bin\System.Web.Http.xml
+F:\AK Work\Latent11\w1\bin\System.Web.Http.WebHost.xml
+F:\AK Work\Latent11\w1\bin\EntityFramework.xml
+F:\AK Work\Latent11\w1\bin\EntityFramework.SqlServer.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.Identity.Core.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.Facebook.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.Cookies.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.Google.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.Twitter.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.Owin.Security.OAuth.xml
+F:\AK Work\Latent11\w1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\AK Work\Latent11\w1\obj\Release\w1.csprojAssemblyReference.cache
+F:\AK Work\Latent11\w1\obj\Release\w1.Migrations.InitialCreate.resources
+F:\AK Work\Latent11\w1\obj\Release\w1.Migrations.CreateIT.resources
+F:\AK Work\Latent11\w1\obj\Release\w1.csproj.GenerateResource.cache
+F:\AK Work\Latent11\w1\obj\Release\w1.csproj.CoreCompileInputs.cache
+F:\AK Work\Latent11\w1\obj\Release\w1.csproj.CopyComplete
+F:\AK Work\Latent11\w1\obj\Release\w1.dll
+F:\AK Work\Latent11\w1\obj\Release\w1.pdb

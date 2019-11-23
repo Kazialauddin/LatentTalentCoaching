@@ -1,0 +1,66 @@
+﻿@model w1.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.DepartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.E1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.E1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.E2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.E2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.E3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.E3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WrittenExam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WrittenExam)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

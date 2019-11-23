@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Live ChaT Room";
+}
+<h2>@ViewBag.Title.</h2>
+
+
+
+<p>Write something.............</p>
+<div class="row " >
+    <div class="col-md-3">
+        <h3>Online Users</h3>
+        <div id="users"></div>
+    </div>
+    <div class="col-md-9">
+        <a>Connected: <span id="displayname"></span></a>
+        <div class="form-group-sm">
+            <input id="msg" />
+            <button class="btn btn-primary" id="send">Send</button>
+            <div id="messages"></div>
+        </div>
+    </div>
+</div>
+@section scripts{
+
+    <script src="~/Scripts/jquery.signalR-2.4.1.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(document).ready(() => {
+            $("#displayname").html(prompt("What's Your Name?"));
+            var proxy = $.connection.chatHub;
+
+            proxy.client.updateUsers = (names) => {
+                $("#users").empty();
+                for (var i = 0; i < names.length; i++) {
+                    $("#users").append(`<li>${names[i]}</li>`);
+                }
+
+            }
+            proxy.client.broadcastMessage = (name, msg) => {
+
+                $("#messages").append(`<li><b>${name}</b>: ${msg}</li>`);
+
+            }
+
+            $.connection.hub.start().done(() => {
+                proxy.server.addMe($("#displayname").text());
+                $("#send").click(() => {
+                    proxy.server.send($("#msg").val());
+                });
+
+            });
+
+        });
+
+
+    </script>
+
+}
+<hr />
+<br />
+<br />
+<hr />
+<address>
+    Muslim Bazar<br />
+    House #31, Road #16 , Block #D<br />
+    <abbr title="Phone">+8801681853705</abbr>
+    <button> <a href="https://goo.gl/maps/oxf6gTDFbQCpJjVh9">Google Map Location</a> </button>
+</address>
+
+<address>
+
+    <strong>Message On:</strong>   <a href="http://m.me/LatentTalentCoachingHome">FACEBOOK</a><br />
+
+    <strong>Mail On:</strong>   <a href="mailto:kazialauddin00@gmail.com">GMAIL</a><br />
+</address>
+
+
+
+
+
+

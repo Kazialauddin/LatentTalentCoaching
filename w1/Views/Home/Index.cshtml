@@ -1,0 +1,150 @@
+﻿<div class="row" style="padding:4px 7px 2px 4px">
+    <div class="bg-info btn-success">
+        <button> @Html.ActionLink("Live Chat", "Contact", "Home")</button>
+    </div>
+</div>
+
+<div ng-app="empApp">
+
+    <div class="row" ng-controller="mainCtrl">
+
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a class="list-group-item" href="#">
+                    <h4 class="list-group-item-heading">Departments</h4>
+                </a>
+                <a href="#" ng-click="selectDept()" class="list-group-item" ng-class="selectedDept== null ? 'active': ''">All</a>
+                <a ng-click="selectDept(d)" class="list-group-item" ng-class="selectedDept== d ? 'active': ''" ng-repeat="d in model.departments" href="#">{{d.DepartmentName}}</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h2>Students Of [{{selectedDept ? selectedDept.DepartmentName: 'All'}}]</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Student's Name</th>
+                        <th>1st Tutorial</th>
+                        <th>1st Semister</th>
+                        <th>2nd Tutorial</th>
+                        <th>2nd Semister</th>
+
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="e in model.students|filter:deptFilterFn">
+                        <td>{{e.StudentName}}</td>
+                        <td>{{e.E1}}</td>
+                        <td>{{e.E2}}</td>
+                        <td>{{e.E3}}</td>
+                        <td>{{e.WrittenExam}}</td>
+                        <td>{{e.E1+e.E2+e.E3+ e.WrittenExam}}</td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" id="addModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Add New Student</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <form id="frmAdd" name="frmAdd" novalidate>
+                            <div class="form-group">
+                                <label class="control-label">Name</label>
+                                <input type="text" class="form-control" ng-model="StudentNew.StudentName" required maxlength="40" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">E1</label>
+                                <input type="text" class="form-control" ng-model="StudentNew.E1" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">E2</label>
+                                <input type="text" class="form-control" ng-model="StudentNew.E1" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">E3</label>
+                                <input type="text" class="form-control" ng-model="StudentNew.E1" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Written Exam</label>
+                                <input type="text" class="form-control" ng-model="StudentNew.WrittenExam" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Category</label>
+                                <select class="form-control" ng-model="bookNew.Category" required
+                                        ng-options="x.Value as x.Name for x in categories">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button ng-click="insert()" form="frmAdd" type="button" class="btn btn-primary" ng-disabled="frmAdd.$invalid">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/angular.js"></script>
+
+    <script>
+        angular.module("empApp", [])
+            .controller("mainCtrl", ($scope, $http) => {
+                $scope.model = {};
+                $scope.selectedDept = null;
+
+                $http({
+                    method: 'GET',
+                    url: "/api/Departments"
+                }).then((r) => {
+                    $scope.model.departments = r.data;
+                }, (e) => {
+                    $scope.model.departments = [];
+                    console.log(e);
+                    });
+
+                $http({
+                    method: 'GET',
+                    url: "/api/Students"
+                }).then((r) => {
+                    $scope.model.students = r.data;
+                }, (e) => {
+                    $scope.model.students = [];
+                    console.log(e);
+                    });
+
+
+                $scope.add = () => {
+                    $("#addModal").modal('show');
+                }
+                $scope.insert = () => {
+                    $http.post("/api/Students", $scope.StudentNew)
+                        .then((r) => {
+                            $scope.students.push(r.data);
+                            $scope.StudentNew = null;
+                            $("#addModal").modal('hide');
+                        }, (e) => {
+                            console.log(e);
+                        });
+                }
+                /////////
+
+                $scope.deptFilterFn = (emp) => {
+                    return $scope.selectedDept == null || $scope.selectedDept.DepartmentId == emp.DepartmentId;
+                }
+                $scope.selectDept = (dept) => {
+                    $scope.selectedDept = dept;
+                }
+            });
+    </script>
+}
