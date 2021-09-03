@@ -17,10 +17,9 @@ namespace w1.Controllers
     {
         private readonly  IDepartmentService _department;
 
-
-        public Departments1Controller()
+        public Departments1Controller(IDepartmentService department)
         {
-            DepartmentService department = new DepartmentService();
+
             _department = department;
         }
         // GET: Departments1
@@ -113,8 +112,8 @@ namespace w1.Controllers
         {
             if (disposing)
             {
-                _department.Dispose(disposing);
-            }
+                 _department.Dispose(disposing);
+                            }
             base.Dispose(disposing);
         }
     }

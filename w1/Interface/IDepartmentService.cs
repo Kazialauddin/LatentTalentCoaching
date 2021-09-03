@@ -7,7 +7,7 @@ using w1.Models;
 
 namespace w1.Interface
 {
-    interface IDepartmentService
+   public interface IDepartmentService
     {
         List<Department> GetAllList();
         Department SingleData(int id);

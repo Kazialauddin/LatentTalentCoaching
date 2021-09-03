@@ -1,7 +1,12 @@
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Web.Mvc;
 using Unity;
+using Unity.Injection;
 using Unity.Mvc5;
+using w1.Controllers;
 using w1.Interface;
+using w1.Models;
 using w1.Services;
 
 namespace w1
@@ -16,7 +21,9 @@ namespace w1
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
-           // container.RegisterType<IDepartmentService, DepartmentService>();
+            container.RegisterType<IDepartmentService, DepartmentService>();
+            container.RegisterType<AccountController>(new InjectionConstructor());
+            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }
