@@ -6,33 +6,36 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using w1.Interface;
 using w1.Models;
+using w1.Services;
 
 namespace w1.Controllers
 {
     [Authorize]
     public class Departments1Controller : Controller
     {
-        private StudentDbContext db = new StudentDbContext();
+        private readonly  IDepartmentService _department;
 
+
+        public Departments1Controller()
+        {
+            DepartmentService department = new DepartmentService();
+            _department = department;
+        }
         // GET: Departments1
         public ActionResult Index()
         {
-            return View(db.Departments.ToList());
+           var dep= _department.GetAllList();
+            return View(dep);
         }
 
         // GET: Departments1/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Department department = db.Departments.Find(id);
-            if (department == null)
-            {
-                return HttpNotFound();
-            }
+            //
+
+            var department = _department.SingleData(id);
             return View(department);
         }
 
@@ -43,16 +46,15 @@ namespace w1.Controllers
         }
 
         // POST: Departments1/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "DepartmentId,DepartmentName")] Department department)
         {
             if (ModelState.IsValid)
             {
-                db.Departments.Add(department);
-                db.SaveChanges();
+                dynamic msg =  _department.Create(department);
+              
                 return RedirectToAction("Index");
             }
 
@@ -60,13 +62,10 @@ namespace w1.Controllers
         }
 
         // GET: Departments1/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Department department = db.Departments.Find(id);
+           
+            var department = _department.SingleData(id);
             if (department == null)
             {
                 return HttpNotFound();
@@ -75,29 +74,24 @@ namespace w1.Controllers
         }
 
         // POST: Departments1/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+ 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "DepartmentId,DepartmentName")] Department department)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(department).State = EntityState.Modified;
-                db.SaveChanges();
+                dynamic msg= _department.Update(department);
                 return RedirectToAction("Index");
             }
             return View(department);
         }
 
         // GET: Departments1/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Department department = db.Departments.Find(id);
+
+            var department = _department.SingleData(id);
             if (department == null)
             {
                 return HttpNotFound();
@@ -110,9 +104,8 @@ namespace w1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Department department = db.Departments.Find(id);
-            db.Departments.Remove(department);
-            db.SaveChanges();
+            dynamic msg = _department.Delete(id);
+          
             return RedirectToAction("Index");
         }
 
@@ -120,7 +113,7 @@ namespace w1.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _department.Dispose(disposing);
             }
             base.Dispose(disposing);
         }
