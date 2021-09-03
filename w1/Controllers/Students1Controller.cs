@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using w1.Interface;
 using w1.Models;
 
 namespace w1.Controllers
@@ -13,23 +14,28 @@ namespace w1.Controllers
     [Authorize]
     public class Students1Controller : Controller
     {
+        private readonly IStudentService _stu;
+        private readonly IDepartmentService _dep;
         private StudentDbContext db = new StudentDbContext();
+
+        public Students1Controller(IStudentService stu, IDepartmentService dep)
+        {
+            _stu = stu;
+            _dep = dep;
+        }
 
         // GET: Students1
         public ActionResult Index()
         {
-            var students = db.Students.Include(s => s.Department);
-            return View(students.ToList());
+            var students = _stu.GetAllList();
+            return View(students);
         }
 
         // GET: Students1/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Student student = db.Students.Find(id);
+            
+            Student student = _stu.SingleData(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -40,21 +46,19 @@ namespace w1.Controllers
         // GET: Students1/Create
         public ActionResult Create()
         {
-            ViewBag.DepartmentId = new SelectList(db.Departments, "DepartmentId", "DepartmentName");
+            ViewBag.DepartmentId = new SelectList(_dep.GetAllList(), "DepartmentId", "DepartmentName");
             return View();
         }
 
         // POST: Students1/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "StudentId,StudentName,E1,E2,E3,WrittenExam,DepartmentId")] Student student)
         {
             if (ModelState.IsValid)
             {
-                db.Students.Add(student);
-                db.SaveChanges();
+               dynamic msg= _stu.Create(student);
                 return RedirectToAction("Index");
             }
 
@@ -63,32 +67,27 @@ namespace w1.Controllers
         }
 
         // GET: Students1/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Student student = db.Students.Find(id);
+
+            Student student = _stu.SingleData(id);
             if (student == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.DepartmentId = new SelectList(db.Departments, "DepartmentId", "DepartmentName", student.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(_dep.GetAllList(), "DepartmentId", "DepartmentName", student.DepartmentId);
             return View(student);
         }
 
         // POST: Students1/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "StudentId,StudentName,E1,E2,E3,WrittenExam,DepartmentId")] Student student)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(student).State = EntityState.Modified;
-                db.SaveChanges();
+               dynamic msg= _stu.Update(student);
                 return RedirectToAction("Index");
             }
             ViewBag.DepartmentId = new SelectList(db.Departments, "DepartmentId", "DepartmentName", student.DepartmentId);
@@ -96,13 +95,10 @@ namespace w1.Controllers
         }
 
         // GET: Students1/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Student student = db.Students.Find(id);
+
+            Student student = _stu.SingleData(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -115,9 +111,8 @@ namespace w1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.Students.Find(id);
-            db.Students.Remove(student);
-            db.SaveChanges();
+            dynamic msg = _stu.Delete(id);
+          
             return RedirectToAction("Index");
         }
 
@@ -125,7 +120,7 @@ namespace w1.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _stu.Dispose(disposing);
             }
             base.Dispose(disposing);
         }

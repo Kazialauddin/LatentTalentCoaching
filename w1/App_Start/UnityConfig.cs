@@ -22,6 +22,7 @@ namespace w1
 
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IDepartmentService, DepartmentService>();
+            container.RegisterType<IStudentService, StudentService>();
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));

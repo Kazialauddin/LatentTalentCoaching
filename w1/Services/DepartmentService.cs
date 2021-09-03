@@ -12,14 +12,7 @@ namespace w1.Services
     {
         private StudentDbContext db = new StudentDbContext();
 
-        public string Create(Department department)
-        {
-
-            db.Departments.Add(department);
-            db.SaveChanges();
-            return "Save Successfully!";
-        }
-
+       
         public string Delete(int id)
         {
 
@@ -64,6 +57,14 @@ namespace w1.Services
             }
 
         }
+        public string Create(Department department)
+        {
+
+            db.Departments.Add(department);
+            db.SaveChanges();
+            return "Save Successfully!";
+        }
+
     }
 
 }

@@ -210,6 +210,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IStudentService.cs" />
     <Compile Include="Interface\IDepartmentService.cs" />
     <Compile Include="Migrations\201911091843238_InitialCreate.cs" />
     <Compile Include="Migrations\201911091843238_InitialCreate.Designer.cs">
@@ -226,6 +227,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\DepartmentService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
