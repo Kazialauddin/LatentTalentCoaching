@@ -10,20 +10,26 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using w1.Interface;
 using w1.Models;
+using w1.Services;
 
 namespace w1.Controllers
 {
     public class DepartmentsController : ApiController
     {
-        private  IDepartmentService _dep =null;
-       // private readonly IStudentService _stu;
-       
+        private readonly IDepartmentService _dep ;
+        //private StudentDbContext db = new StudentDbContext();
 
+        // private readonly IStudentService _stu;
+
+        public DepartmentsController()
+        {
+            _dep = new DepartmentService();
+        }
         // GET: api/Departments
         public IQueryable<Department> GetDepartments()
         {
-            var d= _dep.GetIQueryableList();
-            return d;
+            
+            return _dep.GetIQueryableList();
         }
 
         // GET: api/Departments/5
@@ -106,6 +112,7 @@ namespace w1.Controllers
         {
             if (disposing)
             {
+
                 _dep.Dispose(disposing);
             }
             base.Dispose(disposing);

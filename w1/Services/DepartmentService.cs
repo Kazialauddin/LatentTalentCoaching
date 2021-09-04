@@ -65,10 +65,10 @@ namespace w1.Services
             return "Save Successfully!";
         }
 
-        public IQueryable<Department> GetIQueryableList()
+        public IQueryable <Department> GetIQueryableList()
         {
-            var d = db.Departments;
-            return d.AsQueryable();
+            
+            return db.Departments;
         }
     }
 

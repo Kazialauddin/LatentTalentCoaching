@@ -10,6 +10,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using w1.Interface;
 using w1.Models;
+using w1.Services;
 
 namespace w1.Controllers
 {
@@ -19,13 +20,18 @@ namespace w1.Controllers
         private  IStudentService _stu =null;
        // private readonly IDepartmentService _dep;
 
-      
+      public StudentsController()
+        {
+            _stu = new StudentService();
+        }
+
 
         // GET: api/Students
         public IQueryable<Student> GetStudents()
         {
-            var s = _stu.GetIQueryableList();
-            return (s);
+          
+        return _stu.GetIQueryableList();
+            
         }
 
         // GET: api/Students/5
@@ -107,6 +113,7 @@ namespace w1.Controllers
             if (disposing)
             {
                 _stu.Dispose(disposing);
+
             }
             base.Dispose(disposing);
         }
