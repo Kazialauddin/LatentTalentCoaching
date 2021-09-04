@@ -15,14 +15,15 @@ namespace w1.Controllers
 {
     public class DepartmentsController : ApiController
     {
-        private readonly IDepartmentService _dep;
-        private readonly IStudentService _stu;
+        private  IDepartmentService _dep =null;
+       // private readonly IStudentService _stu;
        
 
         // GET: api/Departments
         public IQueryable<Department> GetDepartments()
         {
-            return (IQueryable<Department>)_dep.GetAllList();
+            var d= _dep.GetIQueryableList();
+            return d;
         }
 
         // GET: api/Departments/5

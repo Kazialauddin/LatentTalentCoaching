@@ -10,7 +10,7 @@ namespace w1.Services
 {
     public class StudentService : IStudentService
     {
-        private StudentDbContext db = new StudentDbContext();
+        public StudentDbContext db = new StudentDbContext();
 
         public string Create(Student Student)
         {
@@ -64,6 +64,12 @@ namespace w1.Services
                 db.Dispose();
             }
 
+        }
+
+        public IQueryable<Student> GetIQueryableList()
+        {
+            var s = db.Students;
+            return s.AsQueryable();
         }
     }
 

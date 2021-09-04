@@ -10,7 +10,7 @@ namespace w1.Services
 {
     public class DepartmentService : IDepartmentService
     {
-        private StudentDbContext db = new StudentDbContext();
+        public StudentDbContext db = new StudentDbContext();
 
        
         public string Delete(int id)
@@ -65,6 +65,11 @@ namespace w1.Services
             return "Save Successfully!";
         }
 
+        public IQueryable<Department> GetIQueryableList()
+        {
+            var d = db.Departments;
+            return d.AsQueryable();
+        }
     }
 
 }

@@ -10,6 +10,7 @@ namespace w1.Interface
    public interface IDepartmentService
     {
         List<Department> GetAllList();
+        IQueryable<Department> GetIQueryableList();
         Department SingleData(int id);
         string Create(Department department);
         string Update(Department department);

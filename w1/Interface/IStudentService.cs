@@ -10,6 +10,7 @@ namespace w1.Interface
    public interface IStudentService
     {
         List<Student> GetAllList();
+        IQueryable<Student> GetIQueryableList();
         Student SingleData(int id);
         string Create(Student student);
         string Update(Student student);
