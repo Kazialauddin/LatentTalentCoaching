@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using w1.Interface;
 using w1.Models;
 
 namespace w1.Controllers
@@ -15,19 +16,22 @@ namespace w1.Controllers
     
     public class StudentsController : ApiController
     {
-        private StudentDbContext db = new StudentDbContext();
+        private readonly IStudentService _stu;
+        private readonly IDepartmentService _dep;
+
+      
 
         // GET: api/Students
         public IQueryable<Student> GetStudents()
         {
-            return db.Students;
+            return (IQueryable<Student>)_stu.GetAllList();
         }
 
         // GET: api/Students/5
         [ResponseType(typeof(Student))]
         public IHttpActionResult GetStudent(int id)
         {
-            Student student = db.Students.Find(id);
+            Student student = _stu.SingleData(id);
             if (student == null)
             {
                 return NotFound();
@@ -50,11 +54,11 @@ namespace w1.Controllers
                 return BadRequest();
             }
 
-            db.Entry(student).State = EntityState.Modified;
+          
 
             try
             {
-                db.SaveChanges();
+                dynamic msg= _stu.Update(student);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -80,8 +84,7 @@ namespace w1.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Students.Add(student);
-            db.SaveChanges();
+            dynamic msg= _stu.Create(student);
 
             return CreatedAtRoute("DefaultApi", new { id = student.StudentId }, student);
         }
@@ -90,30 +93,26 @@ namespace w1.Controllers
         [ResponseType(typeof(Student))]
         public IHttpActionResult DeleteStudent(int id)
         {
-            Student student = db.Students.Find(id);
-            if (student == null)
-            {
-                return NotFound();
-            }
+            dynamic msg = _stu.Delete(id);
+            
 
-            db.Students.Remove(student);
-            db.SaveChanges();
+       
 
-            return Ok(student);
+            return Ok(msg);
         }
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                _stu.Dispose(disposing);
             }
             base.Dispose(disposing);
         }
 
         private bool StudentExists(int id)
         {
-            return db.Students.Count(e => e.StudentId == id) > 0;
+            return _stu.GetAllList().Count(x=>x.StudentId==id) > 0;
         }
     }
 }

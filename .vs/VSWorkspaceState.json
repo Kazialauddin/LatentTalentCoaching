@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\w1",
-    "\\w1\\App_Data",
+    "\\w1\\App_Start",
     "\\w1\\Controllers"
   ],
-  "SelectedNode": "\\Latent11.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -16,7 +16,7 @@ namespace w1.Controllers
     {
         private readonly IStudentService _stu;
         private readonly IDepartmentService _dep;
-        private StudentDbContext db = new StudentDbContext();
+
 
         public Students1Controller(IStudentService stu, IDepartmentService dep)
         {
@@ -62,7 +62,7 @@ namespace w1.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DepartmentId = new SelectList(db.Departments, "DepartmentId", "DepartmentName", student.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(_dep.GetAllList(), "DepartmentId", "DepartmentName", student.DepartmentId);
             return View(student);
         }
 
@@ -90,7 +90,7 @@ namespace w1.Controllers
                dynamic msg= _stu.Update(student);
                 return RedirectToAction("Index");
             }
-            ViewBag.DepartmentId = new SelectList(db.Departments, "DepartmentId", "DepartmentName", student.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(_dep.GetAllList(), "DepartmentId", "DepartmentName", student.DepartmentId);
             return View(student);
         }
 

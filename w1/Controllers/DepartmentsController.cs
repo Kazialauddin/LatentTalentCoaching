@@ -8,25 +8,28 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using w1.Interface;
 using w1.Models;
 
 namespace w1.Controllers
 {
     public class DepartmentsController : ApiController
     {
-        private StudentDbContext db = new StudentDbContext();
+        private readonly IDepartmentService _dep;
+        private readonly IStudentService _stu;
+       
 
         // GET: api/Departments
         public IQueryable<Department> GetDepartments()
         {
-            return db.Departments;
+            return (IQueryable<Department>)_dep.GetAllList();
         }
 
         // GET: api/Departments/5
         [ResponseType(typeof(Department))]
         public IHttpActionResult GetDepartment(int id)
         {
-            Department department = db.Departments.Find(id);
+            Department department = _dep.SingleData(id);
             if (department == null)
             {
                 return NotFound();
@@ -49,11 +52,11 @@ namespace w1.Controllers
                 return BadRequest();
             }
 
-            db.Entry(department).State = EntityState.Modified;
+           
 
             try
             {
-                db.SaveChanges();
+                _dep.Update(department);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -79,8 +82,7 @@ namespace w1.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Departments.Add(department);
-            db.SaveChanges();
+            dynamic msg= _dep.Create(department);
 
             return CreatedAtRoute("DefaultApi", new { id = department.DepartmentId }, department);
         }
@@ -89,30 +91,28 @@ namespace w1.Controllers
         [ResponseType(typeof(Department))]
         public IHttpActionResult DeleteDepartment(int id)
         {
-            Department department = db.Departments.Find(id);
+            Department department = _dep.SingleData(id);
             if (department == null)
             {
                 return NotFound();
             }
 
-            db.Departments.Remove(department);
-            db.SaveChanges();
-
-            return Ok(department);
+             dynamic msg= _dep.Delete(id);
+            return Ok(msg);
         }
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                _dep.Dispose(disposing);
             }
             base.Dispose(disposing);
         }
 
         private bool DepartmentExists(int id)
         {
-            return db.Departments.Count(e => e.DepartmentId == id) > 0;
+            return  _dep.GetAllList().Count(e => e.DepartmentId == id) > 0;
         }
     }
 }
