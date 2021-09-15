@@ -3,7 +3,10 @@
     "",
     "\\w1",
     "\\w1\\App_Start",
-    "\\w1\\Controllers"
+    "\\w1\\Controllers",
+    "\\w1\\Interface",
+    "\\w1\\Models",
+    "\\w1\\Services"
   ],
   "PreviewInSolutionExplorer": false
 }

@@ -487,7 +487,6 @@ C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\bin\Mic
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\obj\Debug\w1.csproj.AssemblyReference.cache
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\obj\Debug\w1.Migrations.InitialCreate.resources
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\obj\Debug\w1.Migrations.CreateIT.resources
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\obj\Debug\w1.csproj.GenerateResource.cache
@@ -495,3 +494,4 @@ C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\obj\Deb
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\obj\Debug\w1.csproj.CopyComplete
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\obj\Debug\w1.dll
 C:\Users\Kazi Alauddin\Source\Repos\Kazialauddin\LatentTalentCoaching\w1\obj\Debug\w1.pdb
+C:\Users\Kazi Alauddin\source\repos\Kazialauddin\LatentTalentCoaching\w1\obj\Debug\w1.csproj.AssemblyReference.cache

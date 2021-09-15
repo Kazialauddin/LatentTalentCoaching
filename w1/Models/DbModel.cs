@@ -54,10 +54,52 @@ namespace w1.Models
         public DbSet<Department> Departments { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Suggestion> Suggestions { get; set; }
+        public DbSet<Question> questions { get; set; }
+        public DbSet<Answer> answers { get; set; }
+        public DbSet<Options> options { get; set; }
         public StudentDbContext()
         {
             Database.SetInitializer(new DbInitializer());
         }
+    }
+
+    public class Answer
+    {
+        public int Id { get; set; }
+        public string Answers { get; set; }
+        public int QuestionId { get; set; }
+        public int OptionId { get; set; }
+    }
+
+    public class Question
+    {
+
+        public int Id { get; set; }
+        public string Qustions { get; set; }
+        //public Answer Answers { get; set; }
+        //public Options Options { get; set; }
+    }
+    public class Options
+    {
+        public int Id { get; set; }
+        public string OptionA { get; set; }
+        public string OptionB { get; set; }
+        public string OptionC { get; set; }
+        public string OptionD { get; set; }
+        public int QuestionId { get; set; }
+
+
+    }
+    public class QuestionViewModel
+    {
+        public int Id { get; set; }
+        public string Qustions { get; set; }
+        public string OptionA { get; set; }
+        public string OptionB { get; set; }
+        public string OptionC { get; set; }
+        public string OptionD { get; set; }
+        public string Answers { get; set; }
+
     }
     public class DbInitializer : DropCreateDatabaseIfModelChanges<StudentDbContext>
     {
