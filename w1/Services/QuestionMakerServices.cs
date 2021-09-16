@@ -25,7 +25,7 @@ namespace w1.Services
                     Question question = new Question();
 
                     question.Qustions = model.Qustions;
-                    db.questions.Add(question);
+                    db.question.Add(question);
 
                     db.SaveChanges();
                     var QID = question.Id;
@@ -72,8 +72,8 @@ namespace w1.Services
 
         public List<QuestionViewModel> GetAllList()
         {
-            var r = db.questions.ToList();
-            var result = (from q in db.questions.ToList()
+            var r = db.question.ToList();
+            var result = (from q in db.question.ToList()
                           join ans in db.answers.ToList()
                           on q.Id equals ans.QuestionId
                           join opt in db.options.ToList()
@@ -101,7 +101,7 @@ namespace w1.Services
 
         public Question GetQuestionDetails(int id)
         {
-            return db.questions.Find(id);
+            return db.question.Find(id);
         }
   
 

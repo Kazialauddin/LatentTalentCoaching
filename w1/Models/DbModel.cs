@@ -32,8 +32,6 @@ namespace w1.Models
         public decimal E3 { get; set; }
         public decimal WrittenExam { get; set; }
 
-
-
         //FK
         [Required, ForeignKey("Department")]
         public int DepartmentId { get; set; }
@@ -49,33 +47,15 @@ namespace w1.Models
         public string Discript1 { get; set; }
         public string Discript2 { get; set; }
     }
-    public class StudentDbContext : DbContext
-    {
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Suggestion> Suggestions { get; set; }
-        public DbSet<Question> questions { get; set; }
-        public DbSet<Answer> answers { get; set; }
-        public DbSet<Options> options { get; set; }
-        public StudentDbContext()
-        {
-            Database.SetInitializer(new DbInitializer());
-        }
-    }
 
-    public class Answer
-    {
-        public int Id { get; set; }
-        public string Answers { get; set; }
-        public int QuestionId { get; set; }
-        public int OptionId { get; set; }
-    }
+
 
     public class Question
     {
 
         public int Id { get; set; }
         public string Qustions { get; set; }
+        public string Q { get; set; }
         //public Answer Answers { get; set; }
         //public Options Options { get; set; }
     }
@@ -90,6 +70,28 @@ namespace w1.Models
 
 
     }
+    public class Answer
+    {
+        public int Id { get; set; }
+        public string Answers { get; set; }
+        public int QuestionId { get; set; }
+        public int OptionId { get; set; }
+    }
+    public class StudentDbContext : DbContext
+    {
+        public DbSet<Question> question { get; set; }
+        public DbSet<Answer> answers { get; set; }
+        public DbSet<Options> options { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Suggestion> Suggestions { get; set; }
+      
+        public StudentDbContext()
+        {
+            Database.SetInitializer(new DbInitializer());
+        }
+    }
+
     public class QuestionViewModel
     {
         public int Id { get; set; }

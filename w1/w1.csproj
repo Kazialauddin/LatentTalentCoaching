@@ -204,6 +204,7 @@
     <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Controllers\Students1Controller.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\SuggestionsController.cs" />
@@ -220,13 +221,13 @@
     <Compile Include="Interface\IQuestionMakerService.cs" />
     <Compile Include="Interface\IStudentService.cs" />
     <Compile Include="Interface\IDepartmentService.cs" />
-    <Compile Include="Migrations\201911091843238_InitialCreate.cs" />
-    <Compile Include="Migrations\201911091843238_InitialCreate.Designer.cs">
-      <DependentUpon>201911091843238_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202109161401422_InitialCreate.cs" />
+    <Compile Include="Migrations\202109161401422_InitialCreate.Designer.cs">
+      <DependentUpon>202109161401422_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911091846482_CreateIT.cs" />
-    <Compile Include="Migrations\201911091846482_CreateIT.Designer.cs">
-      <DependentUpon>201911091846482_CreateIT.cs</DependentUpon>
+    <Compile Include="Migrations\202109161809393_2nd.cs" />
+    <Compile Include="Migrations\202109161809393_2nd.Designer.cs">
+      <DependentUpon>202109161809393_2nd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1157,6 +1158,11 @@
     <Content Include="Views\Suggestions\Details.cshtml" />
     <Content Include="Views\Suggestions\Edit.cshtml" />
     <Content Include="Views\Suggestions\Index.cshtml" />
+    <Content Include="Views\Questions\Create.cshtml" />
+    <Content Include="Views\Questions\Delete.cshtml" />
+    <Content Include="Views\Questions\Details.cshtml" />
+    <Content Include="Views\Questions\Edit.cshtml" />
+    <Content Include="Views\Questions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1174,11 +1180,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911091843238_InitialCreate.resx">
-      <DependentUpon>201911091843238_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109161401422_InitialCreate.resx">
+      <DependentUpon>202109161401422_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911091846482_CreateIT.resx">
-      <DependentUpon>201911091846482_CreateIT.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109161809393_2nd.resx">
+      <DependentUpon>202109161809393_2nd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
